@@ -4,6 +4,6 @@ import com.example.practiceDB.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<Integer, Long> {
-
+    User findByUsername(String username);
 
 }
