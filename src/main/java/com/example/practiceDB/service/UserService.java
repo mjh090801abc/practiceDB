@@ -21,4 +21,11 @@ public class UserService {
         return userRepository.save(user);
     }
 
+    public User login(String username, String password) {
+        User found = userRepository.findByUsername(username);
+        if (found != null && found.getPassword().equals(password)) {
+            return found;
+        }
+        return null;
+    }
 }
