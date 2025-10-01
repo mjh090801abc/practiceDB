@@ -26,6 +26,11 @@ public class UserController {
 
     @PostMapping("singup")
     public String signupSubmit(@ModelAttribute User user, Model model) {
+        return "signup";
+    }
 
+    @GetMapping("/login")
+    public String loginForm(Model model) {
+        return "login";
     }
 }
