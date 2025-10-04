@@ -1,6 +1,6 @@
 package com.example.practiceDB.controller;
 
-import com.example.practiceDB.entity.User;
+import com.example.practiceDB.entity.UserEntity;
 import com.example.practiceDB.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,12 +20,12 @@ public class UserController {
 
     @GetMapping("/signup")
     public String signupForm(Model model) {
-        model.addAttribute("user", new User());
+        model.addAttribute("user", new UserEntity());
         return "signup";
     }
 
     @PostMapping("singup")
-    public String signupSubmit(@ModelAttribute User user, Model model) {
+    public String signupSubmit(@ModelAttribute UserEntity user, Model model) {
         return "signup";
     }
 
